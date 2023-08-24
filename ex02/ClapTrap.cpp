@@ -25,10 +25,13 @@ ClapTrap::~ClapTrap()
 ClapTrap &ClapTrap::operator=(const ClapTrap &assign)
 {
     std::cout << "\033[33mClapTrap " << assign.getName() << " copy assignment operator called\033[0m" << std::endl;
-    this->_attackDamage = assign.getAttackDamage();
-    this->_energyPoints = assign.getEnergyPoints();
-    this->_hitPoints = assign.getHitPoints();
-    this->_name = assign.getName();
+    if (this != &assign)
+    {
+        this->_attackDamage = assign.getAttackDamage();
+        this->_energyPoints = assign.getEnergyPoints();
+        this->_hitPoints = assign.getHitPoints();
+        this->_name = assign.getName();
+    }
     return *this;
 }
 

@@ -9,7 +9,7 @@ class ClapTrap
 {
 public:
     // Constructors
-    ClapTrap(std::string name);
+    ClapTrap(std::string &name);
     ClapTrap(const ClapTrap &copy);
     ~ClapTrap();
     ClapTrap &operator=(const ClapTrap &assign);

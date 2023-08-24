@@ -1,12 +1,14 @@
-NAME = ScavTrap
+NAME = DiamondTrap
 SRC = 	main.cpp	\
 		ClapTrap.cpp	\
 		ScavTrap.cpp	\
+		FragTrap.cpp	\
+		DiamondTrap.cpp	\
 
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -g -I.
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -g -Wshadow -Wno-shadow -I.
 
 #Colors:
 GREEN		=	\e[92;5;118m

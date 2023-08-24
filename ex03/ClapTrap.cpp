@@ -14,7 +14,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 
 ClapTrap::ClapTrap(std::string &name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-    std::cout << "\033[32mClapTrap " << _name << " name constructor called\033[0m" << std::endl;
+    std::cout << "\033[32mClapTrap " << _name << " constructor called\033[0m" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
@@ -25,10 +25,13 @@ ClapTrap::~ClapTrap()
 ClapTrap &ClapTrap::operator=(const ClapTrap &assign)
 {
     std::cout << "\033[33mClapTrap " << assign.getName() << " copy assignment operator called\033[0m" << std::endl;
-    this->_attackDamage = assign.getAttackDamage();
-    this->_energyPoints = assign.getEnergyPoints();
-    this->_hitPoints = assign.getHitPoints();
-    this->_name = assign.getName();
+    if (this != &assign)
+    {
+        this->_attackDamage = assign.getAttackDamage();
+        this->_energyPoints = assign.getEnergyPoints();
+        this->_hitPoints = assign.getHitPoints();
+        this->_name = assign.getName();
+    }
     return *this;
 }
 
