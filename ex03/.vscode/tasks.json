@@ -1,7 +1,7 @@
 {
     "tasks": [
 		{
-			"label": "ex01",
+			"label": "DiamondTrap",
 			"type": "shell",
 			"command": "make",
 			"args": [],
@@ -15,7 +15,7 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "ex01"
+			"detail": "DiamondTrap"
 		}
 	],
     "version": "2.0.0"

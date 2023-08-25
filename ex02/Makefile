@@ -5,6 +5,7 @@ SRC = 	main.cpp	\
 		FragTrap.cpp	\
 
 OBJ = $(SRC:.cpp=.o)
+DEPS = $(SRC:.cpp=.hpp)  # Include header files as dependencies
 CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -g -I.
@@ -23,7 +24,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 	@printf "$(GREEN)- Executable ready.\n$(RESET)"
 
-%.o: %.cpp
+%.o: %.cpp $(DEPS)  # Include header files as dependencies for .cpp files
 	$(CC) $(CPPFLAGS) -c $< -o $@
 
 clean:

@@ -2,14 +2,16 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "ex01",
+			"name": "DiamondTrap",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/PhoneBookApp",
+			"program": "${workspaceFolder}/DiamondTrap",
 			"args": [],
-			"environment": [{ "name": "config", "value": "Debug" }],
+			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
-			"preLaunchTask": "ex01"
-		  }
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "lldb"
+		}
 	]
 }

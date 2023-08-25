@@ -85,7 +85,7 @@ int32_t main(void)
         AttackTakeDamageRepair(math, bob, attackDamage, takeDamage, beRepaired);
     }
     {
-        uint32_t attackDamage = 10;
+        uint32_t attackDamage = 0;
         uint32_t takeDamage = 7;
         uint32_t beRepaired = 4;
 

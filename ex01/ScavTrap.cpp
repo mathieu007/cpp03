@@ -24,7 +24,10 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &assign)
     std::cout << "\033[33mScavTrap " << assign.getName() << " copy assignment operator called\033[0m" << std::endl;
     if (this != &assign)
     {
-        ClapTrap::operator=(assign);
+        this->_attackDamage = assign.getAttackDamage();
+        this->_energyPoints = assign.getEnergyPoints();
+        this->_hitPoints = assign.getHitPoints();
+        this->_name = assign.getName();
         this->_guardGate = assign._guardGate;
     }
     return *this;

@@ -19,7 +19,7 @@ public:
     virtual void attack(std::string const &target);
     void guardGate();
 
-private:
+protected:
     bool _guardGate;
     ScavTrap();
 };

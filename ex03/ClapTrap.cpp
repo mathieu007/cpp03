@@ -1,11 +1,5 @@
 #include "ClapTrap.hpp"
 
-// Constructors
-// ClapTrap::ClapTrap()
-// {
-//     std::cout << "Default Constructor called" << std::endl;
-// }
-
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
     std::cout << "\033[32mClapTrap " << copy._name << " copy constructor called\033[0m" << std::endl;

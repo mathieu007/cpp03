@@ -2,6 +2,7 @@
 
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
+
     std::cout << "\033[35mFragTrap " << copy.getName() << " copy Constructor called\033[0m" << std::endl;
     *this = copy;
 }
@@ -9,8 +10,8 @@ FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 FragTrap::FragTrap(std::string &name) : ClapTrap(name)
 {
     std::cout << "\033[35mFragTrap " << name << " constructor called\033[0m" << std::endl;
-    this->_attackDamage = 20;
-    this->_energyPoints = 50;
+    this->_attackDamage = 30;
+    this->_energyPoints = 100;
     this->_hitPoints = 100;
 }
 
@@ -34,5 +35,8 @@ FragTrap &FragTrap::operator=(const FragTrap &assign)
 
 void FragTrap::highFivesGuys()
 {
-    std::cout << "FragTrap " << _name << ": Let's make a high five guys!" << std::endl;
+    if (_hitPoints == 0)
+        std::cout << "FragTrap " << _name << ": Cannot make a high five, is dead!" << std::endl;
+    else
+        std::cout << "FragTrap " << _name << ": Let's make a high five guys!" << std::endl;
 }

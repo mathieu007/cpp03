@@ -25,6 +25,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &assign)
     std::cout << "\033[33mDiamondTrap " << assign.getName() << " copy assignment operator called\033[0m" << std::endl;
     if (this != &assign)
     {
+        this->_guardGate = assign._guardGate;
         this->_name = assign._name;
         this->_attackDamage = assign._attackDamage;
         this->_energyPoints = assign._energyPoints;
