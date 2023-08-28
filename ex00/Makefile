@@ -1,4 +1,4 @@
-NAME = DiamondTrap
+NAME = ClapTrap
 SRC = 	main.cpp	\
 		ClapTrap.cpp	\
 

@@ -41,6 +41,6 @@ void DiamondTrap::attack(std::string const &target)
 
 void DiamondTrap::whoAmI()
 {
-    std::cout << "DiamondTrap: Hello, i am :" << _name << std::endl;
-    std::cout << "And i inherited ClapTrap :" << ClapTrap::_name << std::endl;
+    std::cout << "Hello, i am derived class DiamondTrap:" << _name << std::endl;
+    std::cout << "And i am derived from the base class ClapTrap :" << ClapTrap::_name << std::endl;
 }

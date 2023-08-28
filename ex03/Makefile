@@ -25,7 +25,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 	@printf "$(GREEN)- Executable ready.\n$(RESET)"
 
-%.o: %.cpp $(DEPS)  # Include header files as dependencies for .cpp files
+%.o: %.cpp $(DEPS)  # Include header files as dependencies for .cpp files, important or might break compilation
 	$(CC) $(CPPFLAGS) -c $< -o $@
 
 clean:

@@ -64,10 +64,7 @@ static void CallAssignCopyConstructor(std::string &ctName)
 
 static void AttackTakeDamageRepair(std::string &ctName, std::string &other, uint32_t attackDamage, uint32_t takeDamage, uint32_t beRepaired)
 {
-    DisableCout();
     DiamondTrap *ct = new DiamondTrap(ctName);
-    DiamondTrap *ct2 = new DiamondTrap(ctName);
-    EnableCout();
     ct->setAttackDamage(attackDamage);
     std::cout << std::endl;
     ct->whoAmI();
@@ -99,9 +96,7 @@ static void AttackTakeDamageRepair(std::string &ctName, std::string &other, uint
     ct->beRepaired(beRepaired);
     std::cout << "--hp: " << ct->getHitPoints() << ", energy: " << ct->getEnergyPoints() << std::endl
               << std::endl;
-    DisableCout();
     delete ct;
-    EnableCout();
 }
 
 int32_t main(void)
@@ -113,14 +108,11 @@ int32_t main(void)
         std::cout
             << "--After calling Destructor " << math << "" << std::endl
             << std::endl;
-        usleep(500);
         CallConstructorCopy(math);
         std::cout
             << "--After calling Destructor " << math << "" << std::endl
             << std::endl;
-        usleep(500);
         CallAssignCopyConstructor(math);
-        usleep(500);
     }
     {
         uint32_t attackDamage = 30;
